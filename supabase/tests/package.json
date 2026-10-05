@@ -1,0 +1,13 @@
+{
+  "name": "dlegacy-db-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node schema.test.mjs && node smoke.local.mjs",
+    "test:mutation": "node mutation.test.mjs",
+    "test:all": "npm test && npm run test:mutation"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8"
+  }
+}
