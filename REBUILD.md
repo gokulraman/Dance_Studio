@@ -96,7 +96,16 @@ Create folder `dLegacy` and the root `.gitignore` from §9.
    **Expect:** tsc prints nothing (exit 0); lint prints no problems; `21/21 checks passed. No issues detected!`
 
 ### 4.4 Run
-Always run Expo commands **from the repository root** (from anywhere else, npx offers to install `expo` — answer `n`).
+The DLegacy app is at the repository root (`Dance_Studio/`); its routes are in `src/app/`. The `mobile/` directory contains the Expo starter screen, not the DLegacy app. Run Expo commands from the repository root. If your terminal is in the parent `Attendance App/` directory, enter the repository with `cd Dance_Studio`. If it is currently in `mobile/`, first return to the repository root:
+
+```sh
+cd ..
+```
+
+- Install the root app's dependencies once (or after they change):
+  ```
+  npm install
+  ```
 - Browser: `npx expo start --web` → http://localhost:8081. Browser tab title must read **DLegacy**.
 - Phone: `npx expo start`, scan the QR with Expo Go. If the phone times out, the computer's firewall is blocking it (set the Wi-Fi network to Private / allow Node).
 
